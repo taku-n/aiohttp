@@ -36,7 +36,6 @@ def create_runner():
     app = web.Application()
     app.add_routes([
             web.get('/', handler_http),
-            web.static('/static', 'static'),
             web.get('/ws', handler_websocket),
     ])
     app['websockets'] = weakref.WeakSet()
